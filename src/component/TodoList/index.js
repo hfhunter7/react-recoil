@@ -1,13 +1,13 @@
 import { useRecoilValue } from 'recoil';
-import { todoListState } from '../../stores';
 import TodoListStats from '../TodoListStats';
 import TodoListFilters from '../TodoListFilters';
 import TodoItemCreator from '../TodoItemCreator';
 import TodoItem from '../TodoItem';
 import React from 'react';
+import { filteredTodoListState } from '../../selectors';
 
 function TodoList() {
-  const todoList = useRecoilValue(todoListState);
+  const todoList = useRecoilValue(filteredTodoListState);
 
   return (
     <>
